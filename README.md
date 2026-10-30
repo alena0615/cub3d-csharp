@@ -36,18 +36,18 @@ dotnet run -c Release --project src/Cub3D -- maps/42.cub
 
 Пересоздать текстуры и лабиринт: `dotnet run --project tools/Generate`.
 
-## Тесты
+### Тесты
 
-dotnet test                                                 # все тесты
-dotnet test --filter "FullyQualifiedName~PublicTests"       # публичные тесты
-dotnet test --filter "FullyQualifiedName~ParserTests"       # разбор карт
-dotnet test --filter "FullyQualifiedName~PlayerTests"       # игрок и движение
-dotnet test --filter "FullyQualifiedName~RaycastTests"      # лучи и двери
-dotnet test --filter "FullyQualifiedName~RenderTests"       # построение кадра
-dotnet test --filter "FullyQualifiedName~ChickenTests"      # цыплёнок
-dotnet test --filter "FullyQualifiedName~PngTests"          # PNG и текстуры
-dotnet test --filter "FullyQualifiedName~CliTests"          # аргументы и коды возврата
-dotnet format --verify-no-changes                           # стиль кода
+dotnet test — все тесты  
+dotnet test --filter "FullyQualifiedNamePublicTests" — публичные тесты  
+dotnet test --filter "FullyQualifiedNameParserTests" — разбор карт  
+dotnet test --filter "FullyQualifiedNamePlayerTests" — игрок и движение  
+dotnet test --filter "FullyQualifiedNameRaycastTests" — лучи и двери  
+dotnet test --filter "FullyQualifiedNameRenderTests" — построение кадра  
+dotnet test --filter "FullyQualifiedNameChickenTests" — цыплёнок  
+dotnet test --filter "FullyQualifiedNamePngTests" — PNG и текстуры  
+dotnet test --filter "FullyQualifiedNameCliTests" — аргументы и коды возврата  
+dotnet format --verify-no-changes — стиль кода
 
 ## Производительность
 
