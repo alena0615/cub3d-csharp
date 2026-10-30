@@ -7,15 +7,15 @@
 Мини-игра от первого лица, написанная на C#, в которой можно ходить, в которой стены с текстурами, пол и потолок — сплошными цветами.
 Для каждого столбца экрана пускается луч по клетчатой карте, алгоритм DDA находит ближайшую стену, и столбец закрашивается полосой высотой H / d, где d — расстояние до стены по направлению взгляда.
 
-## Запуск
+### Запуск
 
 Карты:
 
-dotnet run -c Release --project src/Cub3D -- maps/simple.cub
-dotnet run -c Release --project src/Cub3D -- maps/42.cub
-dotnet run -c Release --project src/Cub3D -- maps/irregular.cub
-dotnet run -c Release --project src/Cub3D -- maps/maze.cub
+dotnet run -c Release --project src/Cub3D -- maps/simple.cub  
+dotnet run -c Release --project src/Cub3D -- maps/irregular.cub  
+dotnet run -c Release --project src/Cub3D -- maps/maze.cub  
 dotnet run -c Release --project src/Cub3D -- maps/bonus.cub
+dotnet run -c Release --project src/Cub3D -- maps/42.cub
 
 При неверных аргументах — справка и код 2, при ошибке в карте — `Error`, причина и код 1.
 
