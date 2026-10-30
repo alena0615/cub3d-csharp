@@ -1,0 +1,16 @@
+# Сборка .NET
+bin/
+obj/
+*.user
+*.suo
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# Временные файлы
+*.tmp
+*.log
+out*.png
+TestResults/
