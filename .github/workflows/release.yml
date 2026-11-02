@@ -2,8 +2,8 @@
 name: Release
 
 on:
-  push:
-    tags: ["v*"]
+  release:
+    types: [published]
 
 permissions:
   contents: write
@@ -31,7 +31,7 @@ jobs:
           printf '@echo off\r\ncd /d "%%~dp0"\r\ncub3d.exe maps\\bonus.cub\r\nif errorlevel 1 pause\r\n' > out/play.bat
           cd out && zip -r ../cub3d-win-x64.zip .
 
-      - name: Релиз
+      - name: Загрузка в релиз
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" cub3d-win-x64.zip out/cub3d.exe --repo "$GITHUB_REPOSITORY" --generate-notes
+        run: gh release upload "${{ github.event.release.tag_name }}" cub3d-win-x64.zip out/cub3d.exe --repo "$GITHUB_REPOSITORY" --clobber
